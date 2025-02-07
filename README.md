@@ -54,10 +54,7 @@ To test the API, you can use tools like `curl` or Postman. Below are some exampl
     ```bash
     curl -u admin:password -X GET http://localhost:5000/employees
     ```
-GET :http://127.0.0.1:5000/employees?page=2&limit=2&lob_name=LOB1
-POST :http://127.0.0.1:5000/employee
-
-Payload: {
+    Payload: {
     "first_name": "Mukesh",
     "last_name": "Doe",
     "email": "john.doe@example.com",
@@ -88,8 +85,19 @@ Payload: {
         }
     ]
 }
-GET :http://127.0.0.1:5000/employee/history/6
 
+4. **Test a Protected Route:**
+    Assuming you have a protected route `/employees?page=2&limit=2&lob_name=LOB1`:
+    ```bash
+    curl -u admin:password -X GET http://localhost:5000/employees?page=2&limit=2&lob_name=LOB1
+    ```    
+
+5. **Test a Protected Route:**
+    Assuming you have a protected route `http://127.0.0.1:5000/employee/history/6`:
+    ```bash
+    curl -u admin:password -X GET http://127.0.0.1:5000/employee/history/6
+
+6. **Basic AUTH**
 admin
 password
 
@@ -102,3 +110,16 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Contact
 For any questions or inquiries, please contact [your-email@example.com](mailto:your-email@example.com).
+
+## Git help
+git init
+git remote add origin https://github.com/SaurabhBijalwan/HRSystem.git
+git add .
+git commit -m "Initial commit"
+
+git push -u origin main -not work
+git push -u origin master - working
+
+git add README.md
+git commit -m "Add README file"
+git push origin main
